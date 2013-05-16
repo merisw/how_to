@@ -1,0 +1,12 @@
+<%= form_for [@instruction, @step] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :order %><br>
+    <%= f.text_field :order %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+  <%= f.submit %>
+<% end %>

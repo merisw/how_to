@@ -1,0 +1,15 @@
+<% title(@instruction.topic, "Instructions") %>
+<h2><%= @instruction.topic %></h2>
+
+<ul id='steps'>
+  <% @instruction.steps.each do |step| %>
+    <li>
+      #<%= step.id %> -
+      <%= link_to step.description, [@instruction, step] %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Edit Instructions", edit_instruction_path(@instruction) %>
+<%= link_to "Delete Instructions", instruction_path(@instruction), :method => :delete, :confirm => "Are you sure you want to delete these instructions?" %>
+<%= link_to "New Step", new_instruction_step_path(@instruction) %>

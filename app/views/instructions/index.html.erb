@@ -1,0 +1,7 @@
+<%= link_to "New set of Instructions", new_instruction_path %>
+<h2>Instructions</h2>
+<ul>
+  <% @instructions.each do |instruction| %>
+    <li><%= link_to instruction.topic, instruction %></li>
+  <% end %>
+</ul>
